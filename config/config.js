@@ -37,6 +37,10 @@ var config = {
 					},
 					{
 						symbol: "soccer-ball-o ",
+						url: "webcal://ics.ecal.com/ecal-sub/58fa505cb5e9122645428a16/Seattle%20Sounders.ics"
+					},
+					{
+						symbol: "soccer-ball-o ",
 						url: "https://calendar.google.com/calendar/ical/v90lr94a08l9ocm19imnu0hs9g%40group.calendar.google.com/public/basic.ics"
 					},
 					{
@@ -88,7 +92,7 @@ var config = {
 				api_key: 'AIzaSyCKXhgpvNXk6TBc9e8equ5PC2M4_ho_EE4',
 				mode: 'driving',
 				origin: '600 7th Ave, Seattle, WA 98104',
-				destination: '20403 68th Ave S, Kent, WA 98032',
+				destination: '401 Elliott Ave W, Seattle, WA 98119',
 				arrival_time: '0900', //optional, but needs to be in 24 hour time if used.
 				route_name: 'Home to Work',
 				changeColor: true,
@@ -113,11 +117,11 @@ var config = {
 				animationSpeed: 0,
 				align: 'right', // align labels
 				//header: 'System Stats', // This is optional
-			},
+			}
 		},
 		{
 			module: 'twitControl',
-			position: 'top_center',
+			position: 'middle_center',
 			config: {
 				maxNumTweets: 3,
 				streamType: 'followings',
@@ -128,6 +132,21 @@ var config = {
 					access_token_secret: 'MlD2vdykoZFrFSgOs9sZgzZt62Aqn4qLLnG70Z94Znhzn'
 				}
 			}
+		},
+		{
+		    module: 'phone_notification',
+            position: 'top_center',
+            header: 'Phone Notifications',
+            config:{
+                accessToken: 'o.OOr4FuIcUxIgONvSXWrewCs2muTvvCcM',
+                numberOfNotifications: 5,
+                displayNotificationIcon: true,
+                displayMessage: true,
+                displayCount: false,
+                alert: false,
+                fade: true,
+                maxCharacters: 50
+            }
 		},
 	]
 
